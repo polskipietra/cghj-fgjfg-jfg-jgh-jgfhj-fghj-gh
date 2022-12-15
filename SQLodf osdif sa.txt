@@ -1,0 +1,20 @@
+SELECT przedmiot, COUNT(*) as ilosc_ocen
+FROM ocena
+GROUP BY przedmiot
+ORDER BY ilosc_ocen DESC;
+
+SELECT przedmiot, COUNT(*) as ilosc_ocen
+FROM ocena
+GROUP BY przedmiot
+ORDER BY ilosc_ocen DESC;
+
+SELECT nauczyciel, COUNT(*) as ilosc_ocen_bdb
+FROM ocena
+WHERE ocena = 'bdb'
+GROUP BY nauczyciel
+ORDER BY ilosc_ocen_bdb DESC;
+
+SELECT YEAR(data_urodzenia) as rok, COUNT(*) as ilosc_nauczycieli
+FROM nauczyciele
+GROUP BY rok
+ORDER BY rok DESC;
